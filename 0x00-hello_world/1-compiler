@@ -1,5 +1,2 @@
 #!/bin/bash
-CFILE=$CFILE
-OUTPUT_FILE="${CFILE%.c}.o"
-gcc -c -o "$OUTPUT_FILE" "$CFILE"
-echo "Compilation without linking complete. Object file '$OUTPUT_FILE' created."
+gcc -c $CFILE
