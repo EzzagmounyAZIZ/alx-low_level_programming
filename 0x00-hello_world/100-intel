@@ -1,2 +1,5 @@
 #!/bin/bash
-gcc -S -masm=intel $CFILE -o `echo $CFILE | cut -d. -f1` .s
+CFILE=main.c
+OUTPUT_FILE="${CFILE%.c}.s"
+gcc -S -masm=intel -o "$OUTPUT_FILE" "$CFILE"
+echo "Assembly code generated and saved in $OUTPUT_FILE"

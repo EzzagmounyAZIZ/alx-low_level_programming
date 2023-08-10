@@ -1,2 +1,4 @@
 #!/bin/bash
-gcc £CFILE -o cisfun
+CFILE=$CFILE
+gcc -o cisfun "$CFILE"
+echo "Compilation complete. Executable 'cisfun' created."
