@@ -20,4 +20,5 @@ else
 lastDigit = n % 10;
 }
 _putvhar(lastDigit + '0');
+return (lastDigit);
 }
