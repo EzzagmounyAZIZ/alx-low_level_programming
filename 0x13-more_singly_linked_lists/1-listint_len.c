@@ -1,11 +1,13 @@
 #include "lists.h"
 
 /**
- * count_listint_nodes - calculates the number of nodes in a linked list
+ * listint_len - calculates the number of nodes in a linked list
  * @head: linked list of type listint_t to analyze
  *
+ * This function calculates the number of nodes in a linked list.
+ *
  * Return: number of nodes
- */
+*/
 size_t listint_len(const listint_t *head)
 {
 	size_t count = 0;
@@ -16,5 +18,5 @@ size_t listint_len(const listint_t *head)
 		head = head->next;
 	}
 
-	return count;
+	return (count);
 }

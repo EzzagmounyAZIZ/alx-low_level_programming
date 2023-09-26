@@ -1,11 +1,14 @@
 #include "lists.h"
 
 /**
- * release_listint_safe - deallocates memory for a linked list
+ * free_listint_safe - deallocates memory for a linked list safely
  * @head: pointer to the first node in the linked list
  *
+ * This function deallocates memory for a linked list safely, taking into
+ * consideration the possibility of a loop in the list.
+ *
  * Return: number of elements in the freed list
- */
+*/
 size_t free_listint_safe(listint_t **head)
 {
 	size_t count = 0;
@@ -13,7 +16,7 @@ size_t free_listint_safe(listint_t **head)
 	listint_t *temp;
 
 	if (!head || !*head)
-		return 0;
+		return (0);
 
 	while (*head)
 	{
@@ -36,5 +39,5 @@ size_t free_listint_safe(listint_t **head)
 
 	*head = NULL;
 
-	return count;
+	return (count);
 }
