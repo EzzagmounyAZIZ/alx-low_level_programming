@@ -4,8 +4,8 @@
  * insert_nodeint_at_index - adds a new node at
  * a specified index in a linked list
  * @head: pointer to the first node in the list
- * @in: index where the new node is to be added
- * @dt: data to insert in the new node
+ * @idx: index where the new node is to be added
+ * @n: data to insert in the new node
  *
  * This function adds a new node with
  * the given data at the specified index in
@@ -13,7 +13,7 @@
  *
  * Return: pointer to the new node, or NULL if unsuccessful
 */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int in, int dt)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i;
 	listint_t *new_node;
@@ -23,7 +23,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int in, int dt)
 	if (!new_node || !head)
 		return (NULL);
 
-	new_node->n = dt;
+	new_node->n = n;
 	new_node->next = NULL;
 
 	if (in == 0)
@@ -33,7 +33,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int in, int dt)
 		return (new_node);
 	}
 
-	for (i = 0; temp && i < in; i++)
+	for (i = 0; temp && i < idx; i++)
 	{
 		if (i == index - 1)
 		{
